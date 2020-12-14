@@ -5,8 +5,8 @@ import javax.swing.*;
 import javax.swing.JPanel;
 import java.util.Random;
 
-public class GamePanel extends JPanel implements ActionListener{                //You implement an action listener to define what should be done when an user performs certain operation.
-                                                                                //https://docs.oracle.com/javase/tutorial/uiswing/events/actionlistener.html
+public class GamePanel extends JPanel implements ActionListener{               
+                                                                                
     static final int SCREEN_WIDTH = 600;
     static final int SCREEN_HEIGHT = 600;
     static final int UNIT_SIZE = 25;
@@ -35,12 +35,12 @@ public class GamePanel extends JPanel implements ActionListener{                
     public void startGame(){
         newApple();
         running = true;
-        timer = new Timer(DELAY,this);              //"this" refers to current ActionListener as an rgument for timer instance.
+        timer = new Timer(DELAY,this);              
         timer.start();
     }
-    @Override                                      //this method to call paintComponent method that exist in javax.swing.JComponent.
+    @Override                                      
     public void paintComponent(Graphics g){ 
-        super.paintComponent(g);                   //super refers to the super class in the library, this method will be invoked when it is time to paint.                                              
+        super.paintComponent(g);                                                                
         draw(g);                                   
     }
     public void draw(Graphics g){   
