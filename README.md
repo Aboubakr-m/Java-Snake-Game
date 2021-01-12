@@ -1,2 +1,2 @@
 # Java-Snake-Game
-This is just simple project with java 
+This is  simple project with java 
